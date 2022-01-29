@@ -1,3 +1,33 @@
-body {
-    font-size: 20px;
+/*
+Add css's classes like in bootstrap. 
+There is own class for every setting
+*/
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+
+/* Redefine class brand-logo */
+.header .brand-logo {
+    position: static;
+}
+
+.header .currency-select input.select-dropdown {
+    margin: 0;
 }
