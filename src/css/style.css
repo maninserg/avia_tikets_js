@@ -30,6 +30,21 @@ There is own class for every setting
 
 .header .currency-select input.select-dropdown {
     margin: 0;
+    color: #fff;
+    border-bottom: none;
+}
+
+
+.header .currency-select input.select-dropdown:focus {
+    border-bottom: none;
+}
+
+.header .currency-select {
+    width: 120px;
+}
+
+.header .currency-select .caret {
+    fill: #fff;
 }
 
 .header .brand-logo {
