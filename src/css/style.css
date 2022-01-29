@@ -31,3 +31,7 @@ There is own class for every setting
 .header .currency-select input.select-dropdown {
     margin: 0;
 }
+
+.header .brand-logo {
+    font-size: 1.5rem;
+}
