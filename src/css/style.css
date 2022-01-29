@@ -34,7 +34,6 @@ There is own class for every setting
     border-bottom: none;
 }
 
-
 .header .currency-select input.select-dropdown:focus {
     border-bottom: none;
 }
