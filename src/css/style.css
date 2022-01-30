@@ -22,6 +22,10 @@ There is own class for every setting
     margin-right: auto;
 }
 
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Redefine class brand-logo */
 .header .brand-logo {
@@ -49,3 +53,5 @@ There is own class for every setting
 .header .brand-logo {
     font-size: 1.5rem;
 }
+
+
