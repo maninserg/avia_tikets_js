@@ -23,7 +23,6 @@ class Locations {
         // {'City, Country' : null }
         // Object.entries => [key, value]
         return Object.entries(cities).reduce((acc, [key]) => {
-            console.log(key);
             acc[key] = null;
             return acc;
         }, {})
