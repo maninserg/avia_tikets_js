@@ -12,17 +12,32 @@ class Locations {
             this.api.cities()
         ]);
         const [counrties, cities] = response;
-        this.countries = this.serialazeCountries(counrties);
-        this.cities = cities;
+        this.countries = this.serializeCountries(counrties);
+        this.cities = this.serializeCities(cities);
         return response;
     }
-    
-    serialazeCountries(countries) {
+
+    serializeCountries(countries) {
         // {'Country code': {...}}
         return countries.reduce((acc, country) => {
             acc[country.code] = country;
             return acc;
         }, {});
+    }
+
+    serializeCities(cities) {
+        // {'City name, Country name' : {...}}
+        return cities.reduce((acc, city) => {
+            const country_name = this.getCountryNameByCode(city.country_code);
+            const city_name = city.name || city.name_translations.en;
+            const key = `${city_name},${country_name}`;
+            acc[key] = city;
+            return acc;
+        }, {})
+    }
+
+    getCountryNameByCode(code) {
+        return this.countries[code].name;
     }
 
     getCitiesByCountryCode(code) {
