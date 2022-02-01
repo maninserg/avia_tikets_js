@@ -19,6 +19,10 @@ class Locations {
         return response;
     }
 
+    getCityCodeByKey(key) {
+        return this.cities[key].code;
+    }
+
     createShortCitiesList(cities) {
         // {'City, Country' : null }
         // Object.entries => [key, value]

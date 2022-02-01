@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function onFormSubmit() {
         // get data from form's inputs
-        const origin = formUI.originValue;
-        const destination = formUI.destinationValue;
+        const origin = locations.getCityCodeByKey(formUI.originValue);
+        const destination = locations.getCityCodeByKey(formUI.destinationValue);
         const depart_date = formUI.departDateValue;
         const return_date = formUI.returnDateValue;
-
+        
+        // return CODE, CODE, 2019-09, 2019-10
         console.log(origin, destination, depart_date, return_date);
     }
 })
