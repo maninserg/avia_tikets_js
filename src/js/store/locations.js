@@ -5,6 +5,7 @@ class Locations {
         this.api = api;
         this.countries = null;
         this.cities = null;
+        this.shortCitiesList = null;
     }
     async init() {
         const response = await Promise.all([
@@ -14,7 +15,18 @@ class Locations {
         const [counrties, cities] = response;
         this.countries = this.serializeCountries(counrties);
         this.cities = this.serializeCities(cities);
+        this.shortCitiesList = this.createShortCitiesList(this.cities); 
         return response;
+    }
+
+    createShortCitiesList(cities) {
+        // {'City, Country' : null }
+        // Object.entries => [key, value]
+        return Object.entries(cities).reduce((acc, [key]) => {
+            console.log(key);
+            acc[key] = null;
+            return acc;
+        }, {})
     }
 
     serializeCountries(countries) {
