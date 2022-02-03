@@ -21,7 +21,6 @@ class Locations {
         this.cities = this.serializeCities(cities);
         this.shortCitiesList = this.createShortCitiesList(this.cities);
         this.airlines = this.serializeAirlines(airlines);
-        console.log(this.airlines);
         return response;
 
     }
@@ -29,6 +28,14 @@ class Locations {
     getCityCodeByKey(key) {
         return this.cities[key].code;
     }
+
+    getAirlineNameByCode(code) {
+        return this.airlines[code].name ? this.airlines[code].name : '';
+    }
+
+    //  getAirlinesLogobyCode(code) {
+    //    return this.airlines[code] ? this.airlines[code].logo : '';
+    // }
 
     createShortCitiesList(cities) {
         // {'City, Country' : null }
