@@ -31,6 +31,10 @@ class Locations {
        return city.code;
     }
 
+    getCityNameByCode(code) {
+        return this.cities[code].name;
+    }
+
     getAirlineNameByCode(code) {
         return this.airlines[code].name ? this.airlines[code].name : '';
     }
